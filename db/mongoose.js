@@ -5,7 +5,7 @@
  const mongoose = require('mongoose');
  require("dotenv").config();
 
- const mongoConnectionUrl = `mongodb://${process.env.MDB_HOST}:${process.env.MDB_PORT}/${process.env.MDB_DB}`;
+ const mongoConnectionUrl = process.env.NODE_ENV == "dev"  ?   `mongodb://${process.env.MDB_HOST}:${process.env.MDB_PORT}/${process.env.MDB_DB}` : process.env.MDB_HOST;
  
  console.log("mongoConnectionUrl :: ", mongoConnectionUrl);
  //mongoose.set('useCreateIndex', true);
