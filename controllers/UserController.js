@@ -199,14 +199,6 @@ class UserController {
     } catch (error) { return error }
   }
 
-  newGenerateToken() {
-    try {
-      const newToken = Math.floor((Math.random() * 100000) + 1);
-      console.log("Generated random token:", newToken);
-      return newToken;
-    } catch (error) { return error}
-  }
-
   async validateToken(uToken, res) {
     try {
       const eistingToken = await Token.findOne({ token: uToken});

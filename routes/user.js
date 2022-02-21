@@ -13,6 +13,6 @@ userRouter.post('/signup', validateInputs(registerRules), UserController.signup.
 userRouter.post('/login', validateInputs(loginRules), UserController.login.bind(UserController));
 userRouter.get('/', authenticated, UserController.getUsers);
 userRouter.post('/validateOTP', UserController.validateUser.bind(UserController));
-userRouter.post('/regenerateOTP/:email', UserController.regenerateToken);
+userRouter.post('/regenerateOTP', UserController.regenerateToken.bind(UserController));
 
 exports.userRouter = userRouter;
