@@ -13,6 +13,7 @@ const aUser = {
   lastname: 'Samuel',
   email: 'oluwasegunayobami7@gmail.com.com',
   password: 'iamsamuel',
+  isValidatedUser: true
 };
 
 let token = '';
